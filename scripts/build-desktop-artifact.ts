@@ -2767,8 +2767,8 @@ export function resolvePackageManagerUserAgent(packageManager: string): string {
 
 export function resolveDesktopProductName(version: string): string {
   return resolveDesktopUpdateChannel(version) === "nightly"
-    ? "T3 Code (Nightly)"
-    : (desktopPackageJson.productName ?? "T3 Code");
+    ? "TFG2 (Nightly)"
+    : (desktopPackageJson.productName ?? "TFG2");
 }
 
 export const createBuildConfig = Effect.fn("createBuildConfig")(function* (
@@ -2844,9 +2844,9 @@ export const createBuildConfig = Effect.fn("createBuildConfig")(function* (
         // macOS 26 offers Messages/Mail codes in every text field unless opted out.
         NSAutoFillRequiresTextContentTypeForOneTimeCodeOnMac: true,
         NSLocalNetworkUsageDescription:
-          "T3 Code connects to devices on your local network for remote environments and commands run by terminals and coding agents.",
+          "TFG2 connects to devices on your local network for remote environments and commands run by terminals and coding agents.",
         NSCalendarsUsageDescription:
-          "Commands you run in T3 Code may need access to your calendars.",
+          "Commands you run in TFG2 may need access to your calendars.",
         NSCalendarsFullAccessUsageDescription:
           "Commands you run in T3 Code may need to read and write your calendar events.",
         NSCalendarsWriteOnlyAccessUsageDescription:

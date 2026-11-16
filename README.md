@@ -4,7 +4,9 @@
   </a>
 </p>
 
-<h1 align="center">T3 Code</h1>
+<h1 align="center">TFG2</h1>
+
+<p align="center">Personal fork of <a href="https://github.com/pingdotgg/t3code">T3 Code</a> by usmaanrazzaq. MIT licensed; see LICENSE.</p>
 
 <p align="center">The open-source control plane for coding agents.</p>
 
