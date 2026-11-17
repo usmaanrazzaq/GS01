@@ -63,7 +63,7 @@ import { Command, Flag } from "effect/cli";
 import { ChildProcess, ChildProcessSpawner } from "effect/process";
 
 const LINUX_ICON_SIZES = [16, 22, 24, 32, 48, 64, 128, 256, 512] as const;
-const DESKTOP_APP_ID = "com.usmaanrazzaq.tfg2";
+const DESKTOP_APP_ID = "com.usmaanrazzaq.gs01";
 const APPLE_TEAM_ID_PATTERN = /^[A-Z0-9]{10}$/u;
 
 const BuildPlatform = Schema.Literals(["mac", "linux", "win"]);
@@ -2767,8 +2767,8 @@ export function resolvePackageManagerUserAgent(packageManager: string): string {
 
 export function resolveDesktopProductName(version: string): string {
   return resolveDesktopUpdateChannel(version) === "nightly"
-    ? "TFG2 (Nightly)"
-    : (desktopPackageJson.productName ?? "TFG2");
+    ? "GS01 (Nightly)"
+    : (desktopPackageJson.productName ?? "GS01");
 }
 
 export const createBuildConfig = Effect.fn("createBuildConfig")(function* (
@@ -2791,7 +2791,7 @@ export const createBuildConfig = Effect.fn("createBuildConfig")(function* (
     afterPack: (yield* Path.Path).join(yield* RepoRoot, "scripts/prepare-server-compile-cache.cjs"),
     appId: DESKTOP_APP_ID,
     productName: resolveDesktopProductName(version),
-    artifactName: "TFG2-${version}-${arch}.${ext}",
+    artifactName: "GS01-${version}-${arch}.${ext}",
     electronLanguages: [...DESKTOP_ELECTRON_LANGUAGES],
     files: [
       ...DESKTOP_FILE_EXCLUSIONS,
@@ -2844,8 +2844,8 @@ export const createBuildConfig = Effect.fn("createBuildConfig")(function* (
         // macOS 26 offers Messages/Mail codes in every text field unless opted out.
         NSAutoFillRequiresTextContentTypeForOneTimeCodeOnMac: true,
         NSLocalNetworkUsageDescription:
-          "TFG2 connects to devices on your local network for remote environments and commands run by terminals and coding agents.",
-        NSCalendarsUsageDescription: "Commands you run in TFG2 may need access to your calendars.",
+          "GS01 connects to devices on your local network for remote environments and commands run by terminals and coding agents.",
+        NSCalendarsUsageDescription: "Commands you run in GS01 may need access to your calendars.",
         NSCalendarsFullAccessUsageDescription:
           "Commands you run in T3 Code may need to read and write your calendar events.",
         NSCalendarsWriteOnlyAccessUsageDescription:

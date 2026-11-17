@@ -1,6 +1,5 @@
 import type { ReactNode } from "react";
 
-
 export function StandalonePage({ children }: { readonly children: ReactNode }) {
   return (
     // The page owns scrolling because root cannot scroll; safe centering keeps oversized cards top-aligned.
@@ -22,8 +21,8 @@ export function StandalonePageHeader({
   return (
     <>
       <div className="flex items-baseline justify-between gap-3 text-muted-foreground">
-        <span className="flex items-baseline gap-1.5" role="img" aria-label="TFG2">
-          <span className="text-lg font-medium tracking-tight">TFG2</span>
+        <span className="flex items-baseline gap-1.5" role="img" aria-label="GS01">
+          <span className="text-lg font-medium tracking-tight">GS01</span>
         </span>
         {context ? <span className="text-sm">{context}</span> : null}
       </div>

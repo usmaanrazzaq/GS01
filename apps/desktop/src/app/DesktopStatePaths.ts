@@ -16,7 +16,7 @@ export function resolveDesktopBaseDir(input: {
   readonly t3Home: Option.Option<string>;
 }): string {
   return Option.getOrElse(normalizeConfiguredBaseDir(input.t3Home), () =>
-    input.joinPath(input.homeDirectory, ".tfg2"),
+    input.joinPath(input.homeDirectory, ".gs01"),
   );
 }
 
